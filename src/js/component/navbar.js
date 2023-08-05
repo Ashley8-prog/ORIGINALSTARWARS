@@ -1,15 +1,25 @@
-import React from "react";
+import React, { startTransition } from "react";
 import { Link } from "react-router-dom";
+import star from "../../img/star.jpg";
+import "../../styles/navbar.css";
+
 
 export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+				<img className="imagen" src={star} />
 			</Link>
 			<div className="ml-auto">
 				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
+
+					<div class="btn-group">
+						<button type="button" className="btn btn-primary dropdown-toggle boton" data-bs-toggle="dropdown" aria-expanded="false">
+							Favorites
+						</button>
+
+					</div>
+
 				</Link>
 			</div>
 		</nav>
